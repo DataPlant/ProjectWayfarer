@@ -1,17 +1,15 @@
 const mongoose = require('mongoose')
 
-const connectionString = 'mongodb://localhost:27017/citydb';
+const connectionString = process.env.MONGODB_URI;
 
-mongoose.connect(connectionString, {
+const configOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-})
+};
 
-mongoose.connection.on('connected', () => {
-    console.log(`Mongoose connected to ${connectionString} 🥭`);
-})
+mongoose.connect(connectionString, configOptions)
+  .then(() => console.log('MongoDB successfully connected...'))
+  .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
 module.exports = {
     Cities: require('./Cities')
