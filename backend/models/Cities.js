@@ -9,6 +9,6 @@ const CitySchema = new Schema({
     headerimg: String,
 })
 
-const City = mongoose.model('Game', CitySchema);
+const City = mongoose.model('City', CitySchema);
 
-module.exports = Game;
+module.exports = City;
