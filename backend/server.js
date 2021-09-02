@@ -6,7 +6,7 @@ const cityRoutes = require('./routes/cityRoutes')
 const port = process.send.PORT || 4000
 const app = express()
 
-//middleware
+//middleware ifeiwjefowejofijweiof
 app.use(cors());
 app.use(express.json())
 app.use(cityRoutes)
