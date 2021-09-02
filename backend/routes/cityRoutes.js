@@ -18,10 +18,12 @@ router.get('/:id', (req, res) => {
     }) 
 })
 
-router.post('/', (err, savedCity) => {
-    if (err) return console.log(err)
+router.post('/', (req, res) => {
+    db.Cities.create(req.body, (err, savedCity) => {
+        if (err) return console.log(err)
 
-    res.json(savedCity)
+        res.json(savedCity)
+    })
 })
 
 router.put('/:id', (req, res) => {
