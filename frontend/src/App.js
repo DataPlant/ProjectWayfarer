@@ -1,10 +1,13 @@
 import './App.css';
-import CityListPage from './pages/CityListPage'
+import Header from './components/Header';
+import Routes from './config/Routes';
+
 
 function App() {
   return (
     <div className="App">
-      <CityListPage />
+      <Header />
+      <Routes />
     </div>
   );
 }
