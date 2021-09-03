@@ -14,8 +14,7 @@ class CityListPage extends React.Component {
         
         CityModel.all().then((data) => {
             this.setState({ cityData: data });
-            
-            console.log(data);
+
         });
     }
 
@@ -35,7 +34,7 @@ class CityListPage extends React.Component {
         return (
             <div>
                 <Header />
-                <h1>City List Page</h1>
+                {this.renderCities()}
             </div>
 
         )

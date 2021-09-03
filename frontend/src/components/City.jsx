@@ -1,15 +1,19 @@
-import React from 'react'
-import Header from '../components/Header' 
+function City(props) {
+    return (
+        <div>
+            <h2>{props.cityObj.cityname}</h2>
+            <p>{props.cityObj.title}</p>
+            <img 
+                className="city-img"
+                src={props.cityObj.headerimg}
+                alt="city picture"
+            />
 
-class City extends React.Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <h1>City</h1>
-            </div>
-        )
-    }
+                
+        </div>
+    )
 }
+
+
 
 export default City
