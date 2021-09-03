@@ -1,12 +1,14 @@
-const Header = () => {
+import { Link } from 'react-router-dom'
+
+function Header() {
     return (
         <header>
-            <h1>Wayfarer</h1>
-            {/* <nav>
-                <p>Sign In</p>
-                <p>Sign Up</p>
-                <p>User Profile</p>
-            </nav> */}
+            <nav>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/cities">All Cities</Link></li>
+                </ul>
+            </nav>
         </header>
     )
 }

@@ -1,15 +1,10 @@
-import React from 'react'
-import Header from './components/Header'
-
-class HomePage extends React.Component {
-    render() {
+function HomePage() {
         return (
             <div>
-                <Header />
-                <h1>Home Page</h1>
-                <h2>Cities</h2>
-                <h2>Posts</h2>
+                <h1>Wayfarer</h1>
             </div>
         )
-    }
+    
 }
+
+export default HomePage

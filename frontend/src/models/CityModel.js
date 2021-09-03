@@ -13,7 +13,12 @@ class CityModel {
            console.log(err);
        })
    }
-    
+   static show(cityId) {
+    return fetch(`${url}/${cityId}`)
+        .then((response) => {
+            return response.json()
+        })
+    }
 }
 
 export default CityModel

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 import CityModel from '../models/CityModel';
 import City from '../components/City';
@@ -33,7 +32,7 @@ class CityListPage extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+            
                 {this.renderCities()}
             </div>
 
