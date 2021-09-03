@@ -1,16 +1,41 @@
-import React from 'react'
-import Header from '../components/Header' 
+import React from 'react';
+import Header from '../components/Header';
+import { Link } from 'react-router-dom';
+import CityModel from '../models/CityModel';
+import City from '../components/City';
 
 class CityListPage extends React.Component {
+    state = {
+        cityData: []
+    }
+
+    componentDidMount() {
+        CityModel.all().then((data) => {
+            this.setState({ cityData: data });
+        });
+    }
+
+    renderCities() {
+        const citiesJSX = this.state.cityData.map((cityObj, idx) => {
+            return (
+              <Link to={`/cities/${cityObj._id}`}>
+                <City key={idx} cityObj={cityObj} />
+              </Link>
+            );
+          });
+      
+          return citiesJSX;
+        }
+
     render() {
         return (
             <div>
                 <Header />
                 <h1>City List Page</h1>
             </div>
-            
+
         )
     }
 }
 
-export default CityListPage 
+export default CityListPage
