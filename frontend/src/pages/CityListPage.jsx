@@ -10,8 +10,12 @@ class CityListPage extends React.Component {
     }
 
     componentDidMount() {
+        console.log('did mount');
+        
         CityModel.all().then((data) => {
             this.setState({ cityData: data });
+            
+            console.log(data);
         });
     }
 

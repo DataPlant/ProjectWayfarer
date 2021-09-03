@@ -1,15 +1,19 @@
-import React from 'react'
-import Header from '../components/Header' 
+const url = 'http://localhost:4000'
 
-class CityModel extends React.Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <h1>City Model</h1>
-            </div>
-        )
-    }
+class CityModel {
+   static all() {
+       return fetch(url)
+       .then((response) => {
+           return response.json()
+       })
+    //    .then((data) => {
+    //        console.log(data);
+    //    })
+       .catch((err) => {
+           console.log(err);
+       })
+   }
+    
 }
 
 export default CityModel

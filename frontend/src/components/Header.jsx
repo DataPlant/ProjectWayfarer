@@ -2,11 +2,11 @@ const Header = () => {
     return (
         <header>
             <h1>Wayfarer</h1>
-            <nav>
+            {/* <nav>
                 <p>Sign In</p>
                 <p>Sign Up</p>
                 <p>User Profile</p>
-            </nav>
+            </nav> */}
         </header>
     )
 }
